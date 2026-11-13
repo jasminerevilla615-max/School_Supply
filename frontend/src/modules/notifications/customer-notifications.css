@@ -1,0 +1,303 @@
+.customer-notifications {
+  display: grid;
+  gap: 18px;
+}
+
+.customer-notifications-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.customer-notifications-heading .eyebrow {
+  margin-bottom: 7px;
+}
+
+.customer-notifications-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 11px;
+}
+
+.customer-notifications-title h2 {
+  margin: 0;
+  font-size: clamp(22px, 2.5vw, 28px);
+}
+
+.customer-notifications-title > span {
+  border-radius: 999px;
+  background: var(--role-soft);
+  color: var(--role-ink);
+  padding: 6px 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.customer-notifications-heading > div > p:last-child {
+  margin: 7px 0 0;
+  color: var(--role-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.customer-notifications-mark-all {
+  min-height: 38px;
+  flex: 0 0 auto;
+  border: 1px solid var(--role-border);
+  border-radius: 5px;
+  background: var(--role-paper);
+  color: var(--role-accent);
+  padding: 0 12px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.customer-notifications-mark-all:disabled {
+  color: var(--role-muted);
+  cursor: default;
+  opacity: .65;
+}
+
+.customer-notification-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-bottom: 1px solid var(--role-border);
+  padding-bottom: 12px;
+}
+
+.customer-notification-filters button {
+  display: inline-flex;
+  min-height: 36px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--role-border);
+  border-radius: 999px;
+  background: var(--role-paper);
+  color: var(--role-muted);
+  padding: 0 12px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background-color .16s ease, border-color .16s ease, color .16s ease;
+}
+
+.customer-notification-filters button.is-active {
+  border-color: #426b5d;
+  background: #426b5d;
+  color: #fff;
+}
+
+.customer-notification-filters button > span {
+  min-width: 19px;
+  border-radius: 999px;
+  background: #203b3614;
+  padding: 2px 5px;
+  text-align: center;
+}
+
+.customer-notification-filters button.is-active > span {
+  background: #ffffff2e;
+}
+
+.customer-notifications-message {
+  margin: 0;
+  border: 1px solid #b7d4c2;
+  border-radius: 5px;
+  background: #edf6ef;
+  color: #285b3b;
+  padding: 10px 12px;
+  font-size: 12px;
+}
+
+.customer-notifications-message.is-error {
+  border-color: #e6c2b8;
+  background: #fbefeb;
+  color: #913e31;
+}
+
+.customer-notification-list {
+  display: grid;
+  gap: 10px;
+}
+
+.customer-notification-card {
+  display: flex;
+  min-width: 0;
+  align-items: flex-start;
+  gap: 14px;
+  border: 1px solid var(--role-border);
+  border-radius: 8px;
+  background: var(--role-paper);
+  padding: 15px;
+  transition: border-color .16s ease, box-shadow .16s ease;
+}
+
+.customer-notification-card:hover {
+  border-color: #a9c6b8;
+  box-shadow: 0 5px 16px #2033300c;
+}
+
+.customer-notification-card.is-unread {
+  border-left: 3px solid var(--role-accent);
+  background: linear-gradient(90deg, var(--role-wash), var(--role-paper) 24%);
+}
+
+.customer-notification-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--role-soft);
+  color: #426b5d;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.customer-notification-icon.is-orders {
+  background: #e6efeb;
+  color: #31574e;
+}
+
+.customer-notification-icon.is-payments {
+  background: #e8f0df;
+  color: #376444;
+}
+
+.customer-notification-icon.is-account {
+  background: #f7e9e3;
+  color: var(--role-accent);
+}
+
+.customer-notification-copy {
+  min-width: 0;
+  flex: 1;
+}
+
+.customer-notification-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.customer-notification-title > strong {
+  color: var(--role-ink);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.customer-notification-unread {
+  flex: 0 0 auto;
+  color: var(--role-accent);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.customer-notification-copy > p {
+  margin: 5px 0 7px;
+  color: var(--role-muted);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.customer-notification-copy > time {
+  color: var(--role-muted);
+  font-size: 10px;
+}
+
+.customer-notification-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 10px;
+}
+
+.customer-notification-actions button {
+  border: 0;
+  background: transparent;
+  color: var(--role-accent);
+  padding: 0;
+  font-size: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.customer-notification-actions .customer-notification-delete {
+  color: var(--role-muted);
+  font-weight: 500;
+}
+
+.customer-notifications-empty {
+  display: grid;
+  min-height: 180px;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+  border: 1px dashed var(--role-border);
+  border-radius: 8px;
+  color: var(--role-muted);
+  padding: 20px;
+  text-align: center;
+}
+
+.customer-notifications-empty > span {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--role-soft);
+  color: #426b5d;
+  font-size: 18px;
+}
+
+.customer-notifications-empty > strong {
+  color: var(--role-ink);
+  font-size: 13px;
+}
+
+.customer-notifications-empty > p {
+  margin: 0;
+  font-size: 11px;
+}
+
+.dark-mode .customer-notification-icon.is-orders {
+  background: #344b44;
+  color: #c1d9cb;
+}
+
+.dark-mode .customer-notification-icon.is-payments {
+  background: #3a4b35;
+  color: #d3e2bd;
+}
+
+.dark-mode .customer-notification-icon.is-account {
+  background: #4a332e;
+  color: #e39a7e;
+}
+
+@media (max-width: 600px) {
+  .customer-notifications-heading {
+    flex-direction: column;
+  }
+
+  .customer-notifications-mark-all {
+    width: 100%;
+  }
+
+  .customer-notification-card {
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .customer-notification-icon {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+  }
+}

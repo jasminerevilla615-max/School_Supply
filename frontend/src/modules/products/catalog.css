@@ -1,0 +1,130 @@
+.product-visual img {
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  object-fit: contain;
+}
+
+.linked-product-details {
+  display: grid;
+  grid-template-columns: minmax(140px, 220px) minmax(0, 1fr);
+  gap: 24px;
+  margin: 20px 0;
+  border: 1px solid var(--line);
+  background: #f9f7f0;
+  padding: 20px;
+}
+
+.linked-product-details > img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.linked-product-details > div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+}
+
+.linked-product-details .eyebrow,
+.linked-product-details h2,
+.linked-product-details p {
+  margin: 0;
+}
+
+.linked-product-details h2 {
+  font-size: 23px;
+}
+
+.linked-product-details p:not(.eyebrow),
+.linked-product-details span {
+  color: #52605a;
+  font-size: 12px;
+}
+
+.linked-product-details strong {
+  font: 14px var(--mono);
+}
+
+.staff-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.staff-product-filters {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 240px);
+  gap: 12px;
+  margin-top: -18px;
+}
+
+.staff-product-filters label {
+  display: grid;
+  gap: 6px;
+  color: var(--role-muted);
+  font-size: 10px;
+}
+
+.staff-product-filters input,
+.staff-product-filters select {
+  width: 100%;
+  min-height: 36px;
+  border: 1px solid var(--role-border);
+  border-radius: 4px;
+  background: var(--role-paper);
+  color: var(--role-ink);
+  padding: 8px 10px;
+}
+
+.staff-product-grid article {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--role-border);
+  background: var(--role-paper);
+  padding: 12px;
+}
+
+.staff-product-grid article.is-inactive {
+  opacity: .7;
+}
+
+.staff-product-grid img {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  object-fit: contain;
+}
+
+.staff-product-grid article > div {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.staff-product-grid small,
+.staff-product-grid span {
+  color: var(--role-muted);
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+  .staff-product-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .linked-product-details {
+    grid-template-columns: 1fr;
+  }
+
+  .linked-product-details > img {
+    height: 140px;
+  }
+}
