@@ -12,7 +12,13 @@ from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 from werkzeug.utils import secure_filename
 
 from .auth import authenticated_user, login_required, role_required
-from .config import CORS_ORIGINS, ROOT_DIR, SECRET_KEY
+from .config import (
+    CORS_ORIGINS,
+    ROOT_DIR,
+    SECRET_KEY,
+    SESSION_COOKIE_SAMESITE,
+    SESSION_COOKIE_SECURE,
+)
 from .database import (
     add_stock,
     create_category,
@@ -180,7 +186,8 @@ def create_app():
     app.config.update(
         SECRET_KEY=SECRET_KEY,
         SESSION_COOKIE_HTTPONLY=True,
-        SESSION_COOKIE_SAMESITE="Lax",
+        SESSION_COOKIE_SAMESITE=SESSION_COOKIE_SAMESITE,
+        SESSION_COOKIE_SECURE=SESSION_COOKIE_SECURE,
         PERMANENT_SESSION_LIFETIME=1800,
     )
     CORS(app, resources={r"/api/*": {"origins": CORS_ORIGINS}}, supports_credentials=True)

@@ -12,6 +12,8 @@ DB_PASSWORD=your-password
 DB_NAME=my_school_supply_db
 ```
 
+For a separately hosted frontend, set `CORS_ORIGINS` to a comma-separated list of allowed frontend origins (scheme and host, without a path), for example `https://school-supply.example.com`. For frontend and backend on different sites, configure `SESSION_COOKIE_SAMESITE=None` and `SESSION_COOKIE_SECURE=true` and serve both over HTTPS so credentialed session requests can include the cookie. Keep the default `Lax` setting for local development or same-site deployments.
+
 Set `SCHOOL_SUPPLY_SECRET` in `.env` to provide the Flask session-signing key. If it is unset, the application creates and reuses a private `.flask_secret` file in the project root so sessions remain valid across server restarts.
 
 The application creates the ORM tables, indexes, standard categories, and the initial administrator account on startup. The administrator is created only when `admin@gmail.com` is absent; later startups preserve that account's profile, password, role, and activation status. Staff accounts are created by an authenticated administrator through User Management; startup does not create a demo staff account. Customer self-registration is limited to 500 customer accounts, enforced by the backend. Existing product and account data is preserved. See the frontend README for development and production run commands.
